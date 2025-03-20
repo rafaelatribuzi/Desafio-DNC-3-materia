@@ -37,15 +37,57 @@ main {
     border: 0.1rem solid rgb(223, 228, 237);
 }
 
-.add-btn {
-    width: 10%;
-    height: 35px;
-    border-radius: 0.5rem;
-    border: 0.1rem solid rgb(223, 228, 237);
-    cursor: pointer;
+
+#create-todo-section {
+    width: 100%;
 
 }
 
-.todo-list-section {
+
+#create-todo-form {
+    font-size: 1.6 rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
     
 }
+
+.input-description {
+    height: 3.2rem;
+    width: 100%;
+    font-size: 1.3rem;
+    border-radius: 0.4rem ;
+    margin-right: 0.4rem ;
+    outline: 0;
+    border: 0.1rem solid rgb(223, 228, 237);
+    padding-left: 0.8rem;
+    
+    
+}
+
+    input:focus {
+        border-color: rgb(161, 161, 211);
+
+}
+
+
+.add-task-btn {
+    box-sizing: border-box;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 0.4rem;
+    border: none;
+    color: #fff;
+    background: rgba(45, 112, 253, 1);
+    font-size: 1.4rem;
+    cursor: pointer;
+    
+       
+
+}
+
+button:hover {
+    opacity: 0.8; 
+}
+
