@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-     <script src="index.js" defer></script> <!-- para deixar o script aqui precisa colocar o defer, se não a página vai ficar carregando sem adicionar as tarefas. -->
-    
+    <script src="index.js"></script>
     
 </head>
 <body>
@@ -19,7 +18,7 @@
             <form id="create-todo-form">
                 <input 
                 type="text"  
-                id="taskInput" 
+                id="description" 
                 name="description"
                 class="input-description" 
                 aria-label="Nome da tarefa"
@@ -27,7 +26,7 @@
                 />
                 <input 
                 type="text" 
-                id="tagInput" 
+                id="description" 
                 name="description" 
                 class="input-description"
                 aria-label="Etiqueta"
@@ -37,14 +36,12 @@
             </form>
         </section>
         <section class="todo-list-section">
-            <ul id="taskList"></ul>
-            <p>Tarefas concluídas: <span id="completedCount">0</span></p>
+            <ul id="todo-list"></ul>
         </section>
         <section>
             
         </section>
         
     </main>
-    
 </body>
 </html>
