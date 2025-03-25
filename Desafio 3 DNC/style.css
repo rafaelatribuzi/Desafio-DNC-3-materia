@@ -13,9 +13,11 @@ body {
     background-color: rgba(245, 249, 255, 1);
     margin: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-}
+    padding: 2rem 0;
+    overflow: auto;
+}   
 
 h1{
     font-size: 3rem;
@@ -29,12 +31,147 @@ main {
     border-radius: 0.8rem;
     border: 0.1rem solid rgb(223, 228, 237);
     padding: 3.2rem 2.4rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Estilização dos itens da lista */
+
+.task-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os elementos à esquerda */ 
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    position: relative; /* Para alinhar o botão no lado direito */
+}
+
+/* Nome da tarefa */
+
+.task-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+    isplay: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os elementos à esquerda */ 
+
+
+}
+
+
+
+
+/* Container da tag e data */
+
+.tag-date-container {
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos */
+    align-items: flex-start; /* Alinha os elementos à esquerda */ 
+    width: 100%;
+    
+}
+
+.task-footer {
+    display: flex;
+    justify-content: space-between;
+    
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+
+
+
+
+
+/* Estilização da tag */
+.task-tag {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgba(177, 186, 203, 1);
+    border: 3px solid rgba(0, 123, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    background: rgba(0, 123, 255, 0.1);
+    
+}
+
+/* Estilização da data */
+.task-date {
+    font-size: 1.2rem;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha os elementos à esquerda */ 
+    
+}
+
+.complete-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-left: auto; /* Empurra o botão para a direita */
+}
+
+
+
 
 #taskInput{
     padding: 0.5rem 0.5rem;
     border-radius: 0.5rem;
     border: 0.1rem solid rgb(223, 228, 237);
+
+}
+
+#tagInput{
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgb(223, 228, 237);
+}
+
+#taskList {
+    font-size: 1.0rem;
+    
+    
+}
+
+#taskList li {
+    
+    color: rgba(0, 23, 71, 1);
+    background: #fff;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    
+    
+    border: 0.1rem solid rgb(223, 228, 237);
+        
+}
+
+
+#taskList button {
+    box-sizing: border-box;
+    width: 8rem;
+    height: 1rem;
+    padding: 1.4rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: #fff;
+    background: rgba(45, 112, 253, 1);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+
 }
 
 
@@ -74,10 +211,10 @@ main {
 
 .add-task-btn {
     box-sizing: border-box;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
     padding: 1.4rem;
-    border-radius: 0.4rem;
+    border-radius: 0.5rem;
     border: none;
     color: #fff;
     background: rgba(45, 112, 253, 1);
@@ -87,7 +224,7 @@ main {
     justify-content: center; 
     align-items: center; 
 
-}
+} 
 
 button:hover {
     opacity: 0.8; 
@@ -101,14 +238,18 @@ button:hover {
 
 .todo-list-section > ul {
     padding-inline-start: 0rem;
-    height: 23rem;
+    min-height: 5rem;
+    max-height: 40rem;
     overflow: auto;
 }
 
 .todo-list-section > ul > li {
     list-style-type: none;
     padding: 0.8rem 1.6rem;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+    color: #6d6060;
+    font-weight: 500;
+    font-family: "Rubik", sans-serif;
     background: #e3e3e9;
     display: flex;
     justify-content: space-between;
@@ -119,3 +260,22 @@ button:hover {
 .todo-list-section > ul > li:last-child {
     margin-bottom: 0;
 }
+
+
+hr {
+    border: none;
+    height: 1px;
+     background-color:rgba(238, 238, 238, 1);
+}
+
+
+#completed-count {
+    font-size: 1.4rem;
+    color: rgba(177, 186, 203, 1);
+    font: inter;
+    text-align: right;
+}
+
+
+
+
